@@ -10,7 +10,7 @@
 
 ## Rodando testes unitários
 
-- npm run test
+- `npm run test`
 
 O resultado deverá ser igual a imagem  abaixo.
 
@@ -19,7 +19,7 @@ O resultado deverá ser igual a imagem  abaixo.
 
 ## Rodando testes end-to-end.
 
-- npm run e2e
+- `npm run e2e`
 
 🔎 **Este comando irá rodar os testes e2e utilizando `cypress`.**
 
