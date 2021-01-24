@@ -14,7 +14,7 @@
 
 O resultado deverá ser igual a imagem  abaixo.
 
-<p align="center"><img src="https://github.com/fmaranflorentino/obras-bibliograficas/tree/master/src/assets/unit.png" width="100%"></p>
+<p align="center"><img src="https://github.com/fmaranflorentino/obras-bibliograficas/blob/master/src/assets/unit.png" width="100%"></p>
 
 
 ## Rodando testes end-to-end.
@@ -25,6 +25,6 @@ O resultado deverá ser igual a imagem  abaixo.
 
 O resultado deverá ser igual a imagem abaixo.
 
-<p align="center"><img src="https://github.com/fmaranflorentino/obras-bibliograficas/tree/master/src/assets/e2e.png" width="100%"></p>
+<p align="center"><img src="https://github.com/fmaranflorentino/obras-bibliograficas/blob/master/src/assets/e2e.png" width="100%"></p>
 
 https://github.com/fmaranflorentino/obras-bibliograficas/tree/master/src/assets/e2e.png
