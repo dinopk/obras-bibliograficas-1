@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HONOR_NAMES, PREPOSITIONS } from '../utils/authors.util';
 
+/**
+ * Service used to format names to specfic bibliographic format.
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -10,6 +13,11 @@ export class AuthorsDataService {
 
   constructor() {}
 
+  /**
+   * Method to validate and format an author name.
+   *
+   * @param authorName
+   */
   formatAuthorName(authorName: string) {
     const authorNames = authorName.trim().split(' ');
 
@@ -28,6 +36,14 @@ export class AuthorsDataService {
     return [formattedAuthorName, formattedAuthorName.trim().split(' ').length];
   }
 
+  /**
+   * Method to handle name variants and mount the string.
+   *
+   * @param authorNames
+   * @param hasPrepositionChar
+   * @param hasHonorName
+   * @param prepositionIndex
+   */
   handleAuthorNameVariants(
     authorNames: string[],
     hasPrepositionChar?: boolean,
@@ -64,6 +80,11 @@ export class AuthorsDataService {
     return formattedAuthorName;
   }
 
+  /**
+   * Method that ensures the right flow to honor name cenario.
+   *
+   * @param authorNames
+   */
   handleHonorName(authorNames: string[]) {
     let hasHonorName = false;
     this.honorNames.map((_, index) => {
@@ -75,6 +96,11 @@ export class AuthorsDataService {
     return hasHonorName;
   }
 
+  /**
+   * Method that ensures the right flow to preposition name cenario.
+   *
+   * @param authorNames
+   */
   handlePrepositionName(authorNames: string[]): [boolean, number] {
     let hasPrepositionChar = false;
     let prepositionIndex = -1;
