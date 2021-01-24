@@ -6,7 +6,7 @@ describe('when application finish loading routes', () => {
   });
 
   it('should navigate to authors page and show the corret h2 title', () => {
-    const title = cy.get('#homeTitle');
+    const title = cy.get('h2#homeTitle');
 
     expect(title.contains('Meus autores favoritos'));
   });
