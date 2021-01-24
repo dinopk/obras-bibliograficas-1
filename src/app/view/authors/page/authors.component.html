@@ -1,5 +1,14 @@
 <h2>Meus autores favoritos</h2>
 
-<ul>
-  <li *ngFor="let author of formattedNames">{{ author?.name }}</li>
+<ul id="homeTitle">
+  <li *ngFor="let author of formattedNames">
+    <q>
+      Sed metus dui, sollicitudin vitae erat feugiat, tempor porttitor mauris.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas.
+    </q>
+    <small>
+      {{ author?.name }}
+    </small>
+  </li>
 </ul>

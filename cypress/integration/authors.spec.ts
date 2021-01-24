@@ -1,10 +1,12 @@
+
+
 describe('when application finish loading routes', () => {
   beforeEach(() => {
     cy.visit('/authors');
   });
 
   it('should navigate to authors page and show the corret h2 title', () => {
-    const title = cy.get('h2');
+    const title = cy.get('#homeTitle');
 
     expect(title.contains('Meus autores favoritos'));
   });

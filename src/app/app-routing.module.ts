@@ -7,6 +7,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./view/authors/authors.module').then((m) => m.AuthorsModule),
   },
+  {
+    path: '',
+    redirectTo: 'authors',
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    redirectTo: 'authors',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

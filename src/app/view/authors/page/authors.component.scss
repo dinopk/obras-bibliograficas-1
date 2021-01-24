@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: #fff;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+
+    li {
+      list-style: none;
+      background: #fff;
+      border-radius: 4px;
+      padding: 20px 10px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: pink;
+      }
+    }
+  }
+
+  small {
+    font-weight: bold;
+  }
+}
