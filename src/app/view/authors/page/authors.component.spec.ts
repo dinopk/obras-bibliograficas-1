@@ -8,9 +8,8 @@ describe('AuthorsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuthorsComponent ]
-    })
-    .compileComponents();
+      declarations: [AuthorsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +20,14 @@ describe('AuthorsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should format all names in the given array', () => {
+    const arr = ['Flávio Maran Florentino', 'Pereira'];
+    const assert = [
+      { name: 'Maran Florentino, Flávio', amount: 3 },
+      { name: 'PEREIRA', amount: 1 },
+    ];
+    expect(component.handleNameVariantsFormat(arr)).toEqual(assert);
   });
 });

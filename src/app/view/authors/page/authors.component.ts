@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthorsDataService } from 'src/app/data/services/authors-data.service';
 
 @Component({
@@ -6,24 +6,30 @@ import { AuthorsDataService } from 'src/app/data/services/authors-data.service';
   templateUrl: './authors.component.html',
   styleUrls: ['./authors.component.scss']
 })
-export class AuthorsComponent implements OnInit {
-  // formattedName: string;
+export class AuthorsComponent {
   inputtedName: string = 'Flávio maran Florentino Neto';
+  nameVariants: string[] = [
+    'Lucas dos Santos',
+    'Paulo Coelho',
+    'João Silva Neto',
+    'Pereira',
+  ];
+  formattedNames: { name: string | number; amount: string | number; }[];
 
-  constructor(private authorsDataService: AuthorsDataService) { }
+  constructor(private authorsDataService: AuthorsDataService) {
+    this.formattedNames = this.handleNameVariantsFormat(this.nameVariants);
+  }
 
-  ngOnInit(): void {
 
-    const [formattedName, nameAmount] = this.authorsDataService.formatAuthorName('João Silve Neto');
-    console.log(formattedName, nameAmount);
+  handleNameVariantsFormat(nameVariants: string[]): { name: string | number; amount: string | number; }[] {
+    return nameVariants.map((nameVariant: string) => {
+      const [name, amount] = this.authorsDataService.formatAuthorName(nameVariant);
 
-    console.log(this.authorsDataService.formatAuthorName('João Silve Neto'));
-    console.log(this.authorsDataService.formatAuthorName('Paulo Coelho'));
-    console.log(this.authorsDataService.formatAuthorName('Jaun'));
-    console.log(this.authorsDataService.formatAuthorName('Flávio dos Santos'));
-    console.log(this.authorsDataService.formatAuthorName('Flávio Maran Florentino'));
-    console.log(this.authorsDataService.formatAuthorName('Flávio Maran Florentino Sagaman'));
-
+      return {
+        name,
+        amount,
+      };
+    })
   }
 
 }

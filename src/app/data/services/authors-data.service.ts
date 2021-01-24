@@ -34,7 +34,7 @@ export class AuthorsDataService {
     hasHonorName?: boolean,
     prepositionIndex?: number
   ) {
-    const lastELement = authorNames[authorNames.length - 1].toUpperCase();
+    const lastELement = authorNames[authorNames.length - 1]
     const substringFirstElLower = authorNames[0].substring(1).toLowerCase();
 
     const substringFirstElUpper = authorNames[0].substring(0, 1).toUpperCase();
@@ -42,7 +42,7 @@ export class AuthorsDataService {
     let formattedAuthorName;
 
     if (authorNames.length === 1) {
-      formattedAuthorName = lastELement;
+      formattedAuthorName = lastELement.toUpperCase();
 
       return formattedAuthorName;
     }
@@ -54,7 +54,7 @@ export class AuthorsDataService {
     }
 
     if (hasHonorName) {
-      formattedAuthorName = `${lastELement} ${authorNames[authorNames.length - 2]}, ${substringFirstElUpper + substringFirstElLower}`;
+      formattedAuthorName = `${authorNames[authorNames.length - 2]} ${lastELement}, ${substringFirstElUpper + substringFirstElLower}`;
 
       return formattedAuthorName;
     }
