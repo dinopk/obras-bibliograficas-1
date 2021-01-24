@@ -26,5 +26,3 @@ O resultado deverá ser igual a imagem  abaixo.
 O resultado deverá ser igual a imagem abaixo.
 
 <p align="center"><img src="https://github.com/fmaranflorentino/obras-bibliograficas/blob/master/src/assets/e2e.png" width="100%"></p>
-
-https://github.com/fmaranflorentino/obras-bibliograficas/tree/master/src/assets/e2e.png
